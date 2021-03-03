@@ -1,0 +1,15 @@
+<h1>StackOverFlow Questions</h1>
+
+<% questions.forEach((question)=>{
+
+    if(question['user'].toLowerCase()==='annu'){ %>
+
+        <h2> <%= question['title'] %></h2>
+        <p> <%= question['user'] %></p>
+        <p> <%= question['votes'] %></p>
+<%   }else { %>
+        <h1>Asked by the other user : </h1>
+       <h2> <%= question['title'] %></h2>
+        <p> <%= question['user'] %></p>
+        <p> <%= question['votes'] %></p>
+<% } }); %>
