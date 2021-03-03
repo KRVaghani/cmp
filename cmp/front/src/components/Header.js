@@ -16,7 +16,7 @@ const Header = () => {
 export default Header;
 
 const Container = styled.div`
-    background: #192734;
+    background: gray;
     color: white;
     display: flex;
     align-items: center;

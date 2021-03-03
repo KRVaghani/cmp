@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+var cors = require('cors')
 const app = express(),
       bodyParser = require("body-parser");
       port = 3800;
@@ -32,7 +33,7 @@ const tasks = [
   
 ];
 
-const users = [
+const users = (
     {
       id: 1,
       user: 'kaushik',
@@ -76,7 +77,7 @@ const users = [
         age: 24
       }
     
-  ];
+);
 
 app.use(bodyParser.json());
 
@@ -99,4 +100,8 @@ app.listen(port, () => {
 
 app.get('/users',(req,res)=>{
     res.json(users);
-})
+});
+
+
+app.use(cors())
+
